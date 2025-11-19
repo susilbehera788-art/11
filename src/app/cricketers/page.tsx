@@ -29,8 +29,8 @@ export default function CricketersPage() {
 
       <AdPlaceholder className="mb-12" />
 
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {cricketers.map((cricketer) => {
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        {cricketers.map((cricketer, index) => {
           const image = PlaceHolderImages.find(
             (img) => img.id === cricketer.imageId
           );
@@ -44,19 +44,24 @@ export default function CricketersPage() {
             cricketer.stats.runs.t20;
 
           return (
-            <Link key={cricketer.id} href={`/cricketers/${cricketer.id}`} passHref>
+            <Link
+              key={cricketer.id}
+              href={`/cricketers/${cricketer.id}`}
+              passHref
+              className={index === 2 ? 'md:col-span-2 md:mx-auto md:w-1/2' : ''}
+            >
               <Card className="group flex h-full transform flex-col overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 <CardHeader className="flex-row items-center gap-4 p-4">
                   {image && (
-                     <div className="relative h-24 w-24 flex-shrink-0">
-                       <Image
+                    <div className="relative h-24 w-24 flex-shrink-0">
+                      <Image
                         src={image.imageUrl}
                         alt={image.description}
                         data-ai-hint={image.imageHint}
                         fill
                         className="rounded-full border-4 border-primary/20 object-cover"
                       />
-                     </div>
+                    </div>
                   )}
                   <div className="flex-grow">
                     <CardTitle className="font-headline text-xl">
@@ -71,20 +76,21 @@ export default function CricketersPage() {
                 <CardContent className="flex-grow p-4 pt-0">
                   <div className="flex justify-around text-center">
                     <div>
-                      <p className="font-bold text-lg text-primary">{totalMatches}</p>
+                      <p className="text-lg font-bold text-primary">
+                        {totalMatches}
+                      </p>
                       <p className="text-xs text-muted-foreground">Matches</p>
                     </div>
                     <div>
-                      <p className="font-bold text-lg text-primary">{totalRuns.toLocaleString()}</p>
+                      <p className="text-lg font-bold text-primary">
+                        {totalRuns.toLocaleString()}
+                      </p>
                       <p className="text-xs text-muted-foreground">Runs</p>
                     </div>
                   </div>
                 </CardContent>
                 <CardFooter className="p-4">
-                  <Button
-                    variant="link"
-                    className="w-full text-primary"
-                  >
+                  <Button variant="link" className="w-full text-primary">
                     View Profile
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
