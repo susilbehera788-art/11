@@ -29,7 +29,7 @@ export function Footer() {
             <h3 className="mb-4 font-semibold">Contact Us</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center">
-                Address: Wankhede Stadium, Mumbai, India
+                Address: e/35, sector-9, cda, cuttack. 753014
               </li>
               <li className="flex items-center">
                 Mobile: +91 84804 47800

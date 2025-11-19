@@ -28,7 +28,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold">Address</h3>
                 <p className="text-muted-foreground">
-                  Wankhede Stadium, D Road, Churchgate, Mumbai, Maharashtra 400020, India
+                  e/35, sector-9, cda, cuttack. 753014
                 </p>
               </div>
             </div>
