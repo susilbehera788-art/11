@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-stadium",
+      "description": "A grand cricket stadium packed with fans under bright floodlights.",
+      "imageUrl": "https://images.unsplash.com/photo-1607734834519-d8576ae60ea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjcmlja2V0JTIwc3RhZGl1bXxlbnwwfHx8fDE3NjM1MDczMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cricket stadium"
+    },
+    {
+      "id": "sachin-tendulkar",
+      "description": "Portrait of Sachin Tendulkar in his Indian cricket jersey.",
+      "imageUrl": "https://images.unsplash.com/photo-1659081431824-77f72421f32d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjcmlja2V0ZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM1NTcxNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cricketer portrait"
+    },
+    {
+      "id": "virat-kohli",
+      "description": "Portrait of Virat Kohli in his Indian cricket jersey.",
+      "imageUrl": "https://images.unsplash.com/photo-1709134800935-d00e89d5b8e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjcmlja2V0ZXIlMjBhY3Rpb258ZW58MHx8fHwxNzYzNTU3MTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cricketer action"
+    },
+    {
+      "id": "ms-dhoni",
+      "description": "Portrait of MS Dhoni in his Indian cricket jersey.",
+      "imageUrl": "https://images.unsplash.com/photo-1659081437770-ec8be5eda526?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjcmlja2V0ZXIlMjBzbWlsaW5nfGVufDB8fHx8MTc2MzU1NzE1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cricketer smiling"
+    },
+    {
+      "id": "1983-world-cup",
+      "description": "Indian team celebrating with the 1983 World Cup trophy.",
+      "imageUrl": "https://images.unsplash.com/photo-1759749222532-c2344aae7525?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0cm9waHklMjBjZWxlYnJhdGlvbnxlbnwwfHx8fDE3NjM1NDI2NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "trophy celebration"
+    },
+    {
+      "id": "2007-t20-world-cup",
+      "description": "Indian team celebrating with the 2007 T20 World Cup trophy.",
+      "imageUrl": "https://images.unsplash.com/photo-1499540633125-484965b60031?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwY2VsZWJyYXRpb258ZW58MHx8fHwxNzYzNDY4ODY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team celebration"
+    },
+    {
+      "id": "2011-world-cup",
+      "description": "Indian team celebrating with the 2011 World Cup trophy.",
+      "imageUrl": "https://images.unsplash.com/photo-1709906602242-e1d35fc553b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjcmlja2V0JTIwdHJvcGh5fGVufDB8fHx8MTc2MzU1NzE1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cricket trophy"
+    },
+    {
+      "id": "rohit-sharma",
+      "description": "Portrait of Rohit Sharma.",
+      "imageUrl": "https://images.unsplash.com/photo-1691042138547-90995378b576?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwbGF5ZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM0NDM1Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "player portrait"
+    },
+    {
+      "id": "jasprit-bumrah",
+      "description": "Portrait of Jasprit Bumrah.",
+      "imageUrl": "https://images.unsplash.com/photo-1695918428860-a3bc6a2f1d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwbGF5ZXIlMjBhY3Rpb258ZW58MHx8fHwxNzYzNTU3MTUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "player action"
+    },
+    {
+      "id": "kl-rahul",
+      "description": "Portrait of KL Rahul.",
+      "imageUrl": "https://images.unsplash.com/photo-1560589194-e65a5de8d868?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjcmlja2V0ZXIlMjBzbWlsaW5nfGVufDB8fHx8MTc2MzU1NzE1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cricketer smiling"
+    },
+    {
+      "id": "contact-map",
+      "description": "Map showing the location of the company.",
+      "imageUrl": "https://images.unsplash.com/photo-1476385822777-70eabacbd41f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2MzUyMzIzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city map"
+    }
+  ]
 }
