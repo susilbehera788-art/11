@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   Card,
@@ -11,7 +10,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { cricketers } from '@/lib/data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { AdPlaceholder } from '@/components/ad-placeholder';
 
 export default function CricketersPage() {
@@ -31,9 +29,6 @@ export default function CricketersPage() {
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {cricketers.map((cricketer, index) => {
-          const image = PlaceHolderImages.find(
-            (img) => img.id === cricketer.imageId
-          );
           const totalMatches =
             cricketer.matches.test +
             cricketer.matches.odi +
@@ -52,17 +47,6 @@ export default function CricketersPage() {
             >
               <Card className="group flex h-full transform flex-col overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 <CardHeader className="flex-row items-center gap-4 p-4">
-                  {image && (
-                    <div className="relative h-24 w-24 flex-shrink-0">
-                      <Image
-                        src={image.imageUrl}
-                        alt={image.description}
-                        data-ai-hint={image.imageHint}
-                        fill
-                        className="rounded-full border-4 border-primary/20 object-cover"
-                      />
-                    </div>
-                  )}
                   <div className="flex-grow">
                     <CardTitle className="font-headline text-xl">
                       {cricketer.name}

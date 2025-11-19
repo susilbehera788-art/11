@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import {
   Card,
   CardContent,
@@ -25,8 +24,6 @@ export default function CricketerProfilePage({
     notFound();
   }
 
-  const image = PlaceHolderImages.find((img) => img.id === cricketer.imageId);
-
   return (
     <div className="container mx-auto max-w-5xl px-4 py-12 md:px-6">
       <div className="grid gap-8 md:grid-cols-3">
@@ -34,18 +31,6 @@ export default function CricketerProfilePage({
         <div className="md:col-span-1">
           <Card className="sticky top-24 text-center">
             <CardHeader>
-              {image && (
-                 <div className="relative mx-auto h-48 w-48">
-                    <Image
-                    src={image.imageUrl}
-                    alt={image.description}
-                    data-ai-hint={image.imageHint}
-                    fill
-                    className="rounded-full border-4 border-primary object-cover"
-                    priority
-                    />
-                 </div>
-              )}
               <CardTitle className="pt-4 font-headline text-3xl">
                 {cricketer.name}
               </CardTitle>
