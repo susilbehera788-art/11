@@ -46,9 +46,6 @@ export default function CurrentPlayersPage() {
                   <TableCell className="font-medium">
                     <div className="flex items-center gap-4">
                       <Avatar>
-                        {image && (
-                            <AvatarImage src={image.imageUrl} alt={player.name} data-ai-hint={image.imageHint} />
-                        )}
                         <AvatarFallback>{player.name.charAt(0)}</AvatarFallback>
                       </Avatar>
                       <span>{player.name}</span>
