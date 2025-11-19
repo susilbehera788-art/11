@@ -35,7 +35,7 @@ export function Footer() {
                 Mobile: +91 84804 47800
               </li>
               <li className="flex items-center">
-                Email: contact@bcc.example.com
+                Email: susil.behera@lotuss.work
               </li>
             </ul>
           </div>

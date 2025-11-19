@@ -43,7 +43,7 @@ export default function ContactPage() {
               <Mail className="h-6 w-6 flex-shrink-0 text-primary" />
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-muted-foreground">contact@bcc.example.com</p>
+                <p className="text-muted-foreground">susil.behera@lotuss.work</p>
               </div>
             </div>
           </CardContent>
