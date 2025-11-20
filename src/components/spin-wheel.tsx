@@ -125,37 +125,37 @@ export function SpinWheel() {
                 }}
               />
             )})}
-          </div>
-          {/* Text labels on top */}
-           <div className="absolute inset-0">
-              {segments.map(({ name, angle }, index) => {
-                const segmentAngle = 360 / segments.length;
-                const textRotation = angle + segmentAngle / 2;
-                return (
-                  <div
-                    key={`text-${index}`}
-                    className="absolute left-1/2 top-1/2 h-1/2 w-1/2 origin-top-left"
-                     style={{
-                       transform: `rotate(${textRotation}deg)`,
-                     }}
-                  >
+            {/* Text labels on top, inside the rotating container */}
+             <div className="absolute inset-0">
+                {segments.map(({ name, angle }, index) => {
+                  const segmentAngle = 360 / segments.length;
+                  const textRotation = angle + segmentAngle / 2;
+                  return (
                     <div
-                      style={{
-                        transform: `rotate(${-textRotation}deg)`,
-                        transformOrigin: '50% 25%',
-                      }}
-                      className="absolute top-[15%] w-full text-center"
+                      key={`text-${index}`}
+                      className="absolute left-1/2 top-0 h-1/2 w-1/2 origin-bottom-left"
+                       style={{
+                         transform: `rotate(${textRotation}deg)`,
+                       }}
                     >
-                      <span
-                        className="text-xs font-bold text-black/80 md:text-sm"
+                      <div
+                        style={{
+                          transform: `translateY(35%) rotate(${-90}deg)`,
+                          transformOrigin: 'center center',
+                        }}
+                        className="absolute flex h-full w-full items-center justify-center"
                       >
-                        {name}
-                      </span>
+                        <span
+                          className="text-xs font-bold text-black/80 md:text-sm"
+                        >
+                          {name}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                )
-              })}
-           </div>
+                  )
+                })}
+             </div>
+          </div>
         </div>
         
         {/* Center hub */}
