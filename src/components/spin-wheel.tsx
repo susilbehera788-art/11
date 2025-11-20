@@ -123,13 +123,13 @@ export function SpinWheel() {
               }}
             >
               <div
-                className={cn('absolute inset-0', color)}
+                className={cn('absolute inset-0 flex items-start justify-center', color)}
               >
-                <div className="flex h-full items-start justify-center pt-4 md:pt-6">
-                  <span className="text-xs font-bold text-black/70 md:text-sm" style={{ transform: `rotate(90deg) translate(-50%, -50%)`, transformOrigin: 'center', writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
-                    {name}
-                  </span>
-                </div>
+                <span 
+                  className="mt-[15%] -rotate-90 text-xs font-bold text-black/70 md:text-sm"
+                >
+                  {name}
+                </span>
               </div>
             </div>
           ))}
