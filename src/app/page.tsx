@@ -18,6 +18,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { AdPlaceholder } from '@/components/ad-placeholder';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { SpinWheel } from '@/components/spin-wheel';
 
 const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-stadium');
 
@@ -63,6 +64,11 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12 md:px-6">
+        {/* Spin Wheel Section */}
+        <section className="mb-16">
+          <SpinWheel />
+        </section>
+
         {/* Live Score Section */}
         <section className="mb-16">
           <h2 className="mb-6 text-center font-headline text-3xl font-bold md:text-4xl">
