@@ -99,51 +99,63 @@ export function SpinWheel() {
       <h2 className="mb-6 text-center font-headline text-2xl font-bold text-primary md:text-3xl">
         Choose Your Favourite Cricketer by Luck!
       </h2>
-      <div className="relative flex h-[270px] w-[270px] items-center justify-center md:h-[360px] md:w-[360px]">
+      <div className="relative flex h-[270px] w-[270px] items-center justify-center md:h-[330px] md:w-[330px]">
         {/* Pointer */}
         <div className="absolute -top-4 z-10 h-0 w-0 border-x-8 border-b-[16px] border-x-transparent border-b-red-600 drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] md:-top-5 md:border-x-[12px] md:border-b-[24px]"></div>
 
         {/* Outer Frame */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-300 to-yellow-500 p-2 shadow-[inset_0_0_10px_rgba(0,0,0,0.3),0_5px_15px_rgba(0,0,0,0.2)] md:p-4">
+        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-300 to-yellow-500 p-2 shadow-[inset_0_0_10px_rgba(0,0,0,0.3),0_5px_15px_rgba(0,0,0,0.2)] md:p-3">
           <div className="h-full w-full rounded-full bg-slate-100 shadow-inner"></div>
         </div>
 
         {/* Wheel */}
         <div
-          className="relative h-[252px] w-[252px] rounded-full overflow-hidden md:h-[330px] md:w-[330px]"
-          style={wheelStyle}
+          className="relative h-full w-full rounded-full overflow-hidden"
         >
-          {segments.map(({ name, angle, color }, index) => {
-             const segmentAngle = 360 / segments.length;
-            return (
-            <div
-              key={index}
-              className="absolute left-1/2 top-0 h-1/2 w-1/2 origin-bottom-left"
-              style={{
-                transform: `rotate(${angle}deg)`,
-                clipPath: `polygon(0% 0%, 100% 0%, 50% 100%)`,
-                backgroundColor: color,
-              }}
-            >
+          <div className="absolute inset-0" style={wheelStyle}>
+            {segments.map(({ angle, color }, index) => {
+              return (
               <div
-                className="absolute flex h-full w-full items-start justify-center"
+                key={index}
+                className="absolute left-1/2 top-0 h-1/2 w-1/2 origin-bottom-left"
                 style={{
-                  transform: `rotate(${-angle - segmentAngle / 2}deg) translateY(-50%)`,
-                  transformOrigin: '50% 100%',
+                  transform: `rotate(${angle}deg)`,
+                  clipPath: `polygon(0% 0%, 100% 0%, 50% 100%)`,
+                  backgroundColor: color,
                 }}
-              >
-                <span
-                  className="mt-[10%] text-xs font-bold text-black/80 md:text-sm"
-                   style={{
-                    display: 'inline-block',
-                    transform: 'translateY(100%) rotate(90deg)'
-                  }}
-                >
-                  {name}
-                </span>
-              </div>
-            </div>
-          )})}
+              />
+            )})}
+          </div>
+          {/* Text labels on top */}
+           <div className="absolute inset-0">
+              {segments.map(({ name, angle }, index) => {
+                const segmentAngle = 360 / segments.length;
+                const textRotation = angle + segmentAngle / 2;
+                return (
+                  <div
+                    key={`text-${index}`}
+                    className="absolute left-1/2 top-1/2 h-1/2 w-1/2 origin-top-left"
+                     style={{
+                       transform: `rotate(${textRotation}deg)`,
+                     }}
+                  >
+                    <div
+                      style={{
+                        transform: `rotate(${-textRotation}deg)`,
+                        transformOrigin: '50% 25%',
+                      }}
+                      className="absolute top-[15%] w-full text-center"
+                    >
+                      <span
+                        className="text-xs font-bold text-black/80 md:text-sm"
+                      >
+                        {name}
+                      </span>
+                    </div>
+                  </div>
+                )
+              })}
+           </div>
         </div>
         
         {/* Center hub */}
