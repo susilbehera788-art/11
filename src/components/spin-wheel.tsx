@@ -25,13 +25,13 @@ const cricketers = [
 ];
 
 const segmentColors = [
-  'bg-red-200',
-  'bg-blue-200',
-  'bg-green-200',
-  'bg-yellow-200',
-  'bg-purple-200',
-  'bg-pink-200',
-  'bg-indigo-200',
+  '#FFDDC1', // Light Peach
+  '#C1FFD7', // Light Mint
+  '#D7C1FF', // Light Lavender
+  '#FFC1C1', // Light Pink
+  '#C1EFFF', // Light Blue
+  '#FFF5C1', // Light Yellow
+  '#E1C1FF', // Light Purple
 ];
 
 export function SpinWheel() {
@@ -99,7 +99,7 @@ export function SpinWheel() {
       <h2 className="mb-6 text-center font-headline text-2xl font-bold text-primary md:text-3xl">
         Choose Your Favourite Cricketer by Luck!
       </h2>
-      <div className="relative flex h-[300px] w-[300px] items-center justify-center md:h-[400px] md:w-[400px]">
+      <div className="relative flex h-[270px] w-[270px] items-center justify-center md:h-[360px] md:w-[360px]">
         {/* Pointer */}
         <div className="absolute -top-4 z-10 h-0 w-0 border-x-8 border-b-[16px] border-x-transparent border-b-red-600 drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] md:-top-5 md:border-x-[12px] md:border-b-[24px]"></div>
 
@@ -110,29 +110,35 @@ export function SpinWheel() {
 
         {/* Wheel */}
         <div
-          className="relative h-[280px] w-[280px] rounded-full md:h-[370px] md:w-[370px]"
+          className="relative h-[252px] w-[252px] rounded-full overflow-hidden md:h-[330px] md:w-[330px]"
           style={wheelStyle}
         >
-          {segments.map(({ name, angle, color }, index) => (
+          {segments.map(({ name, angle, color }, index) => {
+             const segmentAngle = 360 / segments.length;
+            return (
             <div
               key={index}
               className="absolute left-1/2 top-0 h-1/2 w-1/2 origin-bottom-left"
               style={{
                 transform: `rotate(${angle}deg)`,
-                clipPath: 'polygon(0 0, 100% 0, 50% 100%)',
+                clipPath: `polygon(0% 0%, 100% 0%, 50% 100%)`,
+                backgroundColor: color,
               }}
             >
               <div
-                className={cn('absolute inset-0 flex items-start justify-center', color)}
+                className="absolute flex h-full w-full items-start justify-center"
+                style={{
+                  transform: `rotate(${segmentAngle / 2}deg)`,
+                }}
               >
-                <span 
-                  className="mt-[15%] -rotate-90 text-xs font-bold text-black/70 md:text-sm"
+                <span
+                  className="mt-[10%] text-xs font-bold text-black/80 md:text-sm"
                 >
                   {name}
                 </span>
               </div>
             </div>
-          ))}
+          )})}
         </div>
         
         {/* Center hub */}
