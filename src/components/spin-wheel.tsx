@@ -24,7 +24,15 @@ const cricketers = [
   'KL Rahul',
 ];
 
-const colors = ['#FFD700', '#C0C0C0', '#CD7F32', '#FFD700', '#C0C0C0', '#CD7F32', '#FFD700'];
+const segmentColors = [
+  'bg-red-200',
+  'bg-blue-200',
+  'bg-green-200',
+  'bg-yellow-200',
+  'bg-purple-200',
+  'bg-pink-200',
+  'bg-indigo-200',
+];
 
 export function SpinWheel() {
   const [isSpinning, setIsSpinning] = useState(false);
@@ -43,7 +51,7 @@ export function SpinWheel() {
     return cricketers.map((name, index) => ({
       name,
       angle: index * angle,
-      color: colors[index % colors.length],
+      color: segmentColors[index % segmentColors.length],
     }));
   }, []);
 
@@ -115,10 +123,10 @@ export function SpinWheel() {
               }}
             >
               <div
-                className={cn('absolute inset-0', index % 2 === 0 ? 'bg-blue-100' : 'bg-red-100')}
+                className={cn('absolute inset-0', color)}
               >
                 <div className="flex h-full items-start justify-center pt-4 md:pt-6">
-                  <span className="text-xs font-bold text-primary-foreground md:text-sm" style={{ transform: `rotate(90deg) translate(-50%, -50%)`, transformOrigin: 'center', writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
+                  <span className="text-xs font-bold text-black/70 md:text-sm" style={{ transform: `rotate(90deg) translate(-50%, -50%)`, transformOrigin: 'center', writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
                     {name}
                   </span>
                 </div>
