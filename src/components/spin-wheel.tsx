@@ -128,11 +128,16 @@ export function SpinWheel() {
               <div
                 className="absolute flex h-full w-full items-start justify-center"
                 style={{
-                  transform: `rotate(${segmentAngle / 2}deg)`,
+                  transform: `rotate(${-angle - segmentAngle / 2}deg) translateY(-50%)`,
+                  transformOrigin: '50% 100%',
                 }}
               >
                 <span
                   className="mt-[10%] text-xs font-bold text-black/80 md:text-sm"
+                   style={{
+                    display: 'inline-block',
+                    transform: 'translateY(100%) rotate(90deg)'
+                  }}
                 >
                   {name}
                 </span>
