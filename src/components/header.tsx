@@ -32,7 +32,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+          <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={true}>
             <Icons.CricketBall className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block">
               Bharat Cricket Chronicles
@@ -47,6 +47,7 @@ export function Header() {
                   'transition-colors hover:text-primary',
                   pathname === link.href ? 'text-primary' : 'text-muted-foreground'
                 )}
+                prefetch={true}
               >
                 {link.label}
               </Link>
@@ -82,6 +83,7 @@ export function Header() {
                     'flex items-center gap-2 rounded-md p-2 transition-colors hover:bg-accent hover:text-accent-foreground',
                     pathname === link.href ? 'bg-accent text-accent-foreground' : 'text-muted-foreground'
                   )}
+                  prefetch={true}
                 >
                   <link.icon className="h-5 w-5" />
                   {link.label}
