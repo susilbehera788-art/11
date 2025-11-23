@@ -71,6 +71,12 @@
       "description": "Vintage photo of early cricket players.",
       "imageUrl": "https://images.unsplash.com/photo-1593341642345-4b49474a1789?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwY3JpY2tldHxlbnwwfHx8fDE3NjM1NTgxMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "vintage cricket"
+    },
+    {
+      "id": "cricket-game-start",
+      "description": "A cricketer playing a powerful shot in a stadium.",
+      "imageUrl": "https://images.unsplash.com/photo-1595431998632-d7580b5c73d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjcmlja2V0JTIwYmF0c21hbnxlbnwwfHx8fDE3NjM3NjI4ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cricket batsman"
     }
   ]
 }

@@ -5,11 +5,15 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Gamepad2, Play, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const MAX_OVERS = 2;
 const MAX_WICKETS = 10;
 const SHOTS = [0, 1, 2, 3, 4, 6, 'OUT'];
 const SHOT_PROBABILITY = [0.3, 0.2, 0.1, 0.05, 0.15, 0.1, 0.1]; // Must add up to 1
+
+const cricketGameImage = PlaceHolderImages.find((img) => img.id === 'cricket-game-start');
 
 export default function CricketGamePage() {
   const [gameState, setGameState] = useState({
@@ -104,7 +108,17 @@ export default function CricketGamePage() {
   if (!gameState.isGameStarted) {
     return (
         <div className="flex min-h-[calc(100vh-10rem)] flex-col items-center justify-center text-center">
-            <Gamepad2 className="h-24 w-24 text-muted-foreground/50" />
+            {cricketGameImage && (
+                <div className="relative mb-8 h-48 w-48 overflow-hidden rounded-full border-4 border-primary shadow-lg">
+                    <Image
+                        src={cricketGameImage.imageUrl}
+                        alt={cricketGameImage.description}
+                        data-ai-hint={cricketGameImage.imageHint}
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+            )}
             <h1 className="mt-8 text-4xl font-bold">Cricket Challenge</h1>
             <p className="mt-4 max-w-lg text-lg text-muted-foreground">
                 Step up to the crease and face the AI bowler. You have {MAX_OVERS} overs and {MAX_WICKETS} wickets. Can you set a high score?
