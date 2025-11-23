@@ -10,7 +10,7 @@ export function Footer() {
             <div className="mb-4 flex items-center space-x-2">
               <Icons.CricketBall className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold">
-                Bharat Cricket Chronicles
+                Bahar Cricket Story
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -49,7 +49,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Bharat Cricket Chronicles. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Bahar Cricket Story. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

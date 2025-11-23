@@ -10,7 +10,7 @@ import { CreditCardApplyButton } from '@/components/credit-card-apply-button';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'Bharat Cricket Chronicles',
+  title: 'Bahar Cricket Story',
   description: 'Your ultimate destination for Indian cricket updates, history, and player profiles.',
 };
 

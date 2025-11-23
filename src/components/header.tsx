@@ -37,7 +37,7 @@ export function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2" prefetch={true}>
             <Icons.CricketBall className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block">
-              Bharat Cricket Chronicles
+              Bahar Cricket Story
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -73,7 +73,7 @@ export function Header() {
               onClick={() => setIsOpen(false)}
             >
               <Icons.CricketBall className="h-6 w-6 text-primary" />
-              <span className="font-bold">Bharat Cricket Chronicles</span>
+              <span className="font-bold">Bahar Cricket Story</span>
             </Link>
             <div className="flex flex-col space-y-3">
               {navLinks.map((link) => (
@@ -96,7 +96,7 @@ export function Header() {
         </Sheet>
         <Link href="/" className="flex items-center space-x-2 md:hidden">
           <Icons.CricketBall className="h-6 w-6 text-primary" />
-          <span className="font-bold">BCC</span>
+          <span className="font-bold">BCS</span>
         </Link>
       </div>
     </header>
