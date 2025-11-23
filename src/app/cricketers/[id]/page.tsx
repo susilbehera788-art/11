@@ -12,6 +12,7 @@ import type { Cricketer } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Star } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { AdPlaceholder } from '@/components/ad-placeholder';
 
 export default function CricketerProfilePage({
   params,
@@ -56,6 +57,8 @@ export default function CricketerProfilePage({
             <h2 className="mb-4 font-headline text-2xl font-bold">Biography</h2>
             <p className="text-muted-foreground">{cricketer.bio}</p>
           </section>
+
+          <AdPlaceholder className="my-8" />
 
           {/* Career Statistics */}
           <section className="mb-8">
