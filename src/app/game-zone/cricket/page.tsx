@@ -109,13 +109,14 @@ export default function CricketGamePage() {
     return (
         <div className="flex min-h-[calc(100vh-10rem)] flex-col items-center justify-center text-center">
             {cricketGameImage && (
-                <div className="relative mb-8 h-48 w-48 overflow-hidden rounded-full border-4 border-primary shadow-lg">
+                <div className="relative mb-8 flex h-48 w-48 items-center justify-center overflow-hidden rounded-full border-4 border-primary shadow-lg">
                     <Image
                         src={cricketGameImage.imageUrl}
                         alt={cricketGameImage.description}
                         data-ai-hint={cricketGameImage.imageHint}
-                        fill
-                        className="object-cover"
+                        width={192}
+                        height={192}
+                        className="h-full w-full object-cover"
                     />
                 </div>
             )}
