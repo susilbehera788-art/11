@@ -74,8 +74,8 @@
     },
     {
       "id": "cricket-game-start",
-      "description": "A cricketer playing a powerful shot in a stadium.",
-      "imageUrl": "https://images.unsplash.com/photo-1595431998632-d7580b5c73d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjcmlja2V0JTIwYmF0c21hbnxlbnwwfHx8fDE3NjM3NjI4ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A cartoon-style Indian cricketer ready to bat.",
+      "imageUrl": "https://storage.googleapis.com/aip-dev-buddy-files/39097728-6625-45a7-96a8-f3d328325a74.png",
       "imageHint": "cricket batsman"
     }
   ]
