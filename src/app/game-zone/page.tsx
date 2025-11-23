@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Cricket, Disc3 } from 'lucide-react';
+import { Gamepad2, Disc3 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function GameZonePage() {
@@ -19,7 +19,7 @@ export default function GameZonePage() {
         <Card className="flex flex-col">
           <CardHeader className="text-center">
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Cricket className="h-8 w-8" />
+                <Gamepad2 className="h-8 w-8" />
             </div>
             <CardTitle className="font-headline text-2xl">Cricket Challenge</CardTitle>
             <CardDescription>Step up to the crease and face the AI bowler in a thrilling 2-over match.</CardDescription>
