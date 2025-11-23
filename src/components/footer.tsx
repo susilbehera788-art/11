@@ -23,6 +23,7 @@ export function Footer() {
               <li><Link href="/history" className="text-sm text-muted-foreground hover:text-primary">History</Link></li>
               <li><Link href="/cricketers" className="text-sm text-muted-foreground hover:text-primary">Cricketers</Link></li>
               <li><Link href="/players" className="text-sm text-muted-foreground hover:text-primary">Current Players</Link></li>
+              <li><Link href="/game-zone" className="text-sm text-muted-foreground hover:text-primary">Game Zone</Link></li>
             </ul>
           </div>
           <div>
