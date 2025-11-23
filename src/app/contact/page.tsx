@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { AdPlaceholder } from '@/components/ad-placeholder';
 
 const mapImage = PlaceHolderImages.find((img) => img.id === 'contact-map');
 
@@ -16,6 +17,8 @@ export default function ContactPage() {
           We'd love to hear from you. Here's how you can reach us.
         </p>
       </div>
+
+      <AdPlaceholder className="mb-12" />
 
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
         <Card>

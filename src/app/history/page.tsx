@@ -196,6 +196,8 @@ export default function HistoryPage() {
           );
         })}
       </Accordion>
+
+      <AdPlaceholder className="my-12" />
     </div>
   );
 }
