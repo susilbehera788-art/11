@@ -10,6 +10,7 @@ import {
   Users,
   History,
   Phone,
+  Gamepad2,
 } from 'lucide-react';
 import { Icons } from './icons';
 import { usePathname } from 'next/navigation';
@@ -21,6 +22,7 @@ const navLinks = [
   { href: '/history', label: 'History', icon: History },
   { href: '/cricketers', label: 'Cricketers', icon: Users },
   { href: '/players', label: 'Current Players', icon: Trophy },
+  { href: '/game-zone', label: 'Game Zone', icon: Gamepad2 },
   { href: '/contact', label: 'Contact', icon: Phone },
 ];
 

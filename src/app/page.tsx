@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import {
   ArrowRight,
+  Gamepad2,
   History,
   ShieldCheck,
   Trophy,
@@ -121,7 +122,7 @@ export default function Home() {
           <h2 className="mb-8 text-center font-headline text-3xl font-bold md:text-4xl">
             Explore the Chronicles
           </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             <FeatureCard
               icon={<Trophy className="h-10 w-10 text-accent" />}
               title="Trophies & Victories"
@@ -139,6 +140,12 @@ export default function Home() {
               title="Team History"
               description="A journey through the significant moments that shaped Indian cricket."
               link="/history"
+            />
+            <FeatureCard
+              icon={<Gamepad2 className="h-10 w-10 text-accent" />}
+              title="Game Zone"
+              description="Play exciting cricket and carrom games right here on our website."
+              link="/game-zone"
             />
           </div>
         </section>
