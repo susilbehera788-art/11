@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Gamepad2, Disc3 } from 'lucide-react';
 import Link from 'next/link';
+import { AdPlaceholder } from '@/components/ad-placeholder';
 
 export default function GameZonePage() {
   return (
@@ -14,6 +15,8 @@ export default function GameZonePage() {
           Ready to play? Choose a game below and test your skills.
         </p>
       </div>
+
+      <AdPlaceholder className="mb-12" />
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <Card className="flex flex-col">

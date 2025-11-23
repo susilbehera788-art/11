@@ -69,6 +69,8 @@ export default function CurrentPlayersPage() {
           </TableBody>
         </Table>
       </div>
+      
+      <AdPlaceholder className="mt-12" />
     </div>
   );
 }
